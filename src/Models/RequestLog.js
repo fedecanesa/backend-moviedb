@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const requestlogsSchema = new mongoose.Schema({
+const requestlogSchema = new mongoose.Schema({
     search: {
         type: String,
         required: true
@@ -12,4 +12,4 @@ const requestlogsSchema = new mongoose.Schema({
 }, {
     timestamps: true
 })
-module.exports = mongoose.model("RequestLogs", requestlogsSchema);
+module.exports = mongoose.model("RequestLogs", requestlogSchema);
