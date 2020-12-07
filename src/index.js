@@ -2,7 +2,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const { response } = require("express");
 const morgan = require("morgan");
 const MOVIE_URI_DATABASE = require("./config"); 
 
@@ -10,16 +9,16 @@ const MOVIE_URI_DATABASE = require("./config");
 const app = express();
 
 // MIDDLEWARES 
-app.use(morgan('dev'));
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); 
+app.use(morgan('dev'));
+app.use(cors());
 
 // SETTINGS 
 app.set("port", process.env.PORT || 4000);
 
 /* ENDPOINTS */
-app.use(require('./Routes/index.routes'));
+app.use(require('./Routes/movie.routes'));
 
 mongoose.connect( MOVIE_URI_DATABASE , {
     useUnifiedTopology: true,

@@ -1,15 +1,8 @@
 const mongoose = require("mongoose");
 
 const requestlogSchema = new mongoose.Schema({
-    search: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        required: true
-    }
-}, {
-    timestamps: true
+    search: {type: String},
+    date: {type: Date},
+    ip: {type: String}
 })
-module.exports = mongoose.model("RequestLogs", requestlogSchema);
+module.exports = mongoose.model("Requestlog", requestlogSchema);
