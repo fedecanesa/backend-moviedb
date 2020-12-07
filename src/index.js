@@ -22,9 +22,7 @@ app.use(require('./Routes/movie.routes'));
 
 mongoose.connect( MOVIE_URI_DATABASE , {
     useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true
+    useNewUrlParser: true
     }, (error) => {
     if (error) { 
         console.log("Error on try connect database.\n") }

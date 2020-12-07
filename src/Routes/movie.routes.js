@@ -30,7 +30,7 @@ newRequest =  function ( query ) {
    
      newQuery.save()
     .then( query => { console.log("It´s ok") } )
-    .catch( error=> {console.log("It´s to bad") } )
+    .catch( error=> {console.log("It´s bad") } )
 }
 
 
